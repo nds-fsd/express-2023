@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: nuclio
+      MONGO_INITDB_ROOT_PASSWORD: boilerplate
+      MONGO_DATABASE_NAME: app
+    ports:
+      - "27022:27017"
