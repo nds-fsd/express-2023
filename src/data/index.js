@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect('mongodb://nuclio:boilerplate@localhost:27022/app?authSource=admin');
 
 
 const mongo = mongoose.connection;
