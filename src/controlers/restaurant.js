@@ -5,6 +5,8 @@ const getAll = async (req, res) => {
     categories: req.query.categories,
   };
 
+  console.log(req.jwtPayload);
+
   const result = await Restaurant.find(queryStrings).populate(["categories", "owner"]);
   res.json(result);
 };
